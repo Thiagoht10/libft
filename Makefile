@@ -6,7 +6,7 @@
 #    By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/15 18:08:12 by thde-sou          #+#    #+#              #
-#    Updated: 2026/01/25 01:59:48 by thde-sou         ###   ########.fr        #
+#    Updated: 2026/01/25 02:34:50 by thde-sou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,4 +51,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re run leak
+.PHONY: all clean fclean re
