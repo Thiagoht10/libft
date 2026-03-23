@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_gnl.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 01:43:54 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/01/25 02:21:01 by thde-sou         ###   ########.fr       */
+/*   Created: 2026/03/23 21:10:41 by thiago            #+#    #+#             */
+/*   Updated: 2026/03/23 21:12:15 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	str_len(char *s)
+static int	line_len(char *s)
 {
 	int	i;
 
@@ -26,26 +26,20 @@ static int	str_len(char *s)
 	return (i);
 }
 
-static int	safe_buf(char *buf)
+static void	safe_buf(char *buf)
 {
 	int	i;
 	int	j;
-	int	found;
 
 	i = 0;
 	j = 0;
-	found = 0;
 	while (buf[i] && buf[i] != '\n')
 		i++;
 	if (buf[i] == '\n')
-	{
 		i++;
-		found = 1;
-	}
 	while (buf[i])
 		buf[j++] = buf[i++];
 	buf[j] = '\0';
-	return (found);
 }
 
 static char	*mount_line(char *line, char *buf)
@@ -57,7 +51,7 @@ static char	*mount_line(char *line, char *buf)
 
 	i = 0;
 	j = 0;
-	size = str_len(line) + str_len(buf) + 1;
+	size = line_len(line) + line_len(buf) + 1;
 	out = malloc(sizeof(char) * size);
 	if (!out)
 		return (NULL);
@@ -76,34 +70,41 @@ static char	*mount_line(char *line, char *buf)
 	return (out);
 }
 
-static int	read_buf(int fd, char *buf, int *n)
+static int	gnl_aux(char *buf, char *line)
 {
-	if (buf[0] != '\0')
+	if (!line)
 		return (1);
-	*n = read(fd, buf, BUFFER_SIZE);
-	if (*n <= 0)
-		return (0);
-	buf[*n] = '\0';
-	return (1);
+	if (ft_strchr(buf, '\n'))
+	{
+		safe_buf(buf);
+		return (1);
+	}
+	buf[0] = '\0';
+	return (0);
 }
 
-char	*get_next_line(int fd)
+char	*ft_gnl(int fd)
 {
-	static char	buf[BUFFER_SIZE + 1];
+	static char	buf[MAX_FD][BUFFER_SIZE + 1];
 	char		*line;
 	int			n;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	n = 1;
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= MAX_FD)
 		return (NULL);
 	line = NULL;
-	n = 1;
-	while (read_buf(fd, buf, &n))
+	while (n > 0)
 	{
-		line = mount_line(line, buf);
-		if (!line)
-			return (NULL);
-		if (safe_buf(buf))
-			return (line);
+		if (buf[fd][0] == '\0')
+		{
+			n = read(fd, buf[fd], BUFFER_SIZE);
+			if (n <= 0)
+				break ;
+			buf[fd][n] = '\0';
+		}
+		line = mount_line(line, buf[fd]);
+		if (gnl_aux(buf[fd], line))
+			break ;
 	}
 	if (line && line[0] != '\0')
 		return (line);

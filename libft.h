@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:23:38 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/01/25 01:45:18 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/03/23 20:43:43 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@
 # include <string.h>
 # include <strings.h>
 # include <unistd.h>
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
@@ -88,6 +92,6 @@ void				ft_strv_shift(char **vector);
 
 /*get_next_line*/
 
-char				*get_next_line(int fd);
+char				*ft_gnl(int fd);
 
 #endif

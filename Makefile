@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+         #
+#    By: thiago <thiago@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/15 18:08:12 by thde-sou          #+#    #+#              #
-#    Updated: 2026/01/25 02:34:50 by thde-sou         ###   ########.fr        #
+#    Updated: 2026/03/23 20:25:50 by thiago           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,9 @@ ft_isascii.c  ft_memmove.c  ft_strchr.c      ft_strmapi.c   ft_toupper.c \
 ft_isdigit.c  ft_memset.c   ft_strdup.c      ft_strncmp.c	ft_itoa_base.c \
 ft_strv_shift.c ft_split_whitespace.c ft_size_vetor.c ft_join3.c \
 ft_isspace.c ft_free_vector.c  ft_free_failed_vector.c ft_vetor_dup.c \
-get_next_line.c \
 ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c ft_gnl.c
 
 OBJ = $(SRC:.c=.o)
 
