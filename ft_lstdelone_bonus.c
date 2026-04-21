@@ -3,15 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 20:30:04 by thde-sou          #+#    #+#             */
-/*   Updated: 2025/05/01 17:42:12 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/04/21 22:31:30 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Deleted and frees a single list node.
+ * 
+ * This function applies the given function to the node's content
+ * and frees the node itself.
+ * 
+ * @param lst The node to delete.
+ * @param del The function used to delete the content.
+ */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)

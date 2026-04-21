@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_vector.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 00:48:59 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/01/25 00:52:45 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/04/21 21:38:50 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * Frees a null-terminated string vector.
+ * 
+ * This function frees each string in the vector until a NULL
+ * pointer is found, then frees the vector itself and sets it to NULL.
+ * 
+ * @param vector A pointer to the string array to be freed.
+ */
 void	ft_free_vector(char ***vector)
 {
 	int	i;

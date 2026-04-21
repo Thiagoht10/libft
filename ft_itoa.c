@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 22:04:59 by thde-sou          #+#    #+#             */
-/*   Updated: 2025/05/04 13:18:25 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/04/21 22:13:57 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,15 @@ static char	*if_zero(void)
 	return (str);
 }
 
+/**
+ * Converts an integer to a string.
+ * 
+ * This function allocates and returns a string representing
+ * the given integer, handling negative values.
+ * 
+ * @param n The integer to convert.
+ * @return The converted string, or NULL on failure.
+ */
 char	*ft_itoa(int n)
 {
 	long int	num;

@@ -3,15 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:30:23 by thde-sou          #+#    #+#             */
-/*   Updated: 2025/05/04 18:48:43 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/04/21 22:47:55 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Counts the number of nodes in a list.
+ * 
+ * This function iterates through the list and returns
+ * the total number of nodes.
+ * 
+ * @param lst The list to count.
+ * @return The number of nodes in the list.
+ */
 int	ft_lstsize(t_list *lst)
 {
 	int	size;

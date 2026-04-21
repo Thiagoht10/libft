@@ -6,7 +6,7 @@
 /*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 21:10:41 by thiago            #+#    #+#             */
-/*   Updated: 2026/03/23 21:12:15 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/21 21:43:27 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,16 @@ static int	gnl_aux(char *buf, char *line)
 	return (0);
 }
 
+/**
+ * Reads a line from a file descriptor.
+ * 
+ * This function reads from the given file descriptor ans returns
+ * a line including the newline character if present. It keeps
+ * internal buffers for multiple file descriptors.
+ * 
+ * @param fd The file descriptor to read from.
+ * @return The next line read, or NULL on EOF or error.
+ */
 char	*ft_gnl(int fd)
 {
 	static char	buf[MAX_FD][BUFFER_SIZE + 1];

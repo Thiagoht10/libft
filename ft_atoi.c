@@ -3,15 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thde-sou <thde-sou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 16:07:28 by thde-sou          #+#    #+#             */
-/*   Updated: 2025/04/20 19:04:04 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/04/21 21:29:08 by thiago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * Converts a string to an integer.
+ *
+ * This function mimics the behavior of atoi(), converting the initial
+ * portion of the string pointed to by nptr to an int. It skips leading
+ * whitespace characters, handles an optional sign (+ or -), and then
+ * processes consecutive numeric digits.
+ *
+ * @param nptr The string to be converted.
+ * @return The converted integer value.
+ */
 int	ft_atoi(const char *nptr)
 {
 	int	sign;
