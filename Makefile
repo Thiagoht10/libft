@@ -26,6 +26,7 @@ ft_isalnum.c  ft_memcmp.c   ft_putstr_fd.c   ft_strlcpy.c   ft_substr.c \
 ft_isalpha.c  ft_memcpy.c   ft_split.c       ft_strlen.c    ft_tolower.c \
 ft_isascii.c  ft_memmove.c  ft_strchr.c      ft_strmapi.c   ft_toupper.c \
 ft_isdigit.c  ft_memset.c   ft_strdup.c      ft_strncmp.c	ft_itoa_base.c \
+ft_strcmp.c ft_isnumeric.c ft_memmem.c \
 ft_strv_shift.c ft_split_whitespace.c ft_size_vetor.c ft_join3.c \
 ft_isspace.c ft_free_vector.c  ft_free_failed_vector.c ft_vetor_dup.c \
 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
