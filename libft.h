@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:23:38 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/03/26 20:51:37 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/22 19:12:00 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,13 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
 # endif
+
+typedef enum e_vtype
+{
+	V_STR,
+	V_INT,
+	V_NODE,
+}	t_vtype;
 
 typedef struct s_list
 {
@@ -82,7 +89,6 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *list, void (*f)(void *));
 int					ft_lstsize(t_list *lst);
 char				*ft_join3(char *s1, char *s2, char *s3);
-size_t				ft_size_vetor(char **vetor);
 char				**ft_vetor_dup(char **vetor);
 void				free_failed_vector(char ***vector, int idx);
 void				ft_free_vector(char ***vector);
@@ -94,6 +100,7 @@ void				ft_clean_2(void **prt1, void **prt2);
 void				ft_clean_4(void **prt1, void **prt2, void **prt3,
 						void **prt4);
 void				ft_close_fd(int *fd);
+size_t				ft_size_vetor(char **vetor);
 
 /*get_next_line*/
 

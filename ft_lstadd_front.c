@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 19:57:56 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/04/21 22:25:17 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/22 17:20:51 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 /**
  * Adds a node to the beginning of a list.
- * 
+ *
  * This function inserts the given node at the start of the list.
- * The new node bacomes the first element.
- * 
+ * The new node becomes the first element.
+ *
  * @param lst A pointer to the list.
  * @param new The node to add.
  */

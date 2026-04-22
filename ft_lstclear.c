@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 21:19:59 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/04/21 22:28:13 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/22 17:20:59 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * Deletes and frees all node of a list.
- * 
- * This function iterates though the list, deleting each node
+ * Deletes and frees all nodes of a list.
+ *
+ * This function iterates through the list, deleting each node
  * using the provided function, and sets the list to NULL.
- * 
+ *
  * @param lst A pointer to the list.
  * @param del The function used to delete node content.
  */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 20:20:51 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/04/21 21:53:58 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/22 17:19:46 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 /**
  * Checks if a character is an ASCII value.
- * 
- * This function return 1 if the character is within the
+ *
+ * This function returns 1 if the character is within the
  * ASCII range (0 to 127), and 0 otherwise.
- * 
+ *
  * @param c The character to be checked.
  * @return 1 if ASCII, 0 otherwise.
  */

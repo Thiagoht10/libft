@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_gnl.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 21:10:41 by thiago            #+#    #+#             */
-/*   Updated: 2026/04/21 21:43:27 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/22 17:19:27 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,11 @@ static int	gnl_aux(char *buf, char *line)
 
 /**
  * Reads a line from a file descriptor.
- * 
- * This function reads from the given file descriptor ans returns
+ *
+ * This function reads from the given file descriptor and returns
  * a line including the newline character if present. It keeps
  * internal buffers for multiple file descriptors.
- * 
+ *
  * @param fd The file descriptor to read from.
  * @return The next line read, or NULL on EOF or error.
  */

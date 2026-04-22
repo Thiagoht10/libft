@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:16:39 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/04/21 22:35:36 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/22 17:22:04 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 /**
  * Iterates over a list and applies a function to each node.
- * 
- * This functions traverses the list and applies the given
+ *
+ * This function traverses the list and applies the given
  * function to the content of each node.
- * 
+ *
  * @param lst The list to iterate over.
  * @param f The function to apply to each content.
  */

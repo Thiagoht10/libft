@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_join3.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thiago <thiago@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 00:26:29 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/04/21 22:17:40 by thiago           ###   ########.fr       */
+/*   Updated: 2026/04/22 17:20:40 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 /**
  * Concatenates three strings into a new string.
- * 
+ *
  * This function allocates memory and joins s1, s2, and s3
  * into a single null-terminated string.
- * 
+ *
  * @param s1 The first string.
- * @param s2 The secund string.
+ * @param s2 The second string.
  * @param s3 The third string.
  * @return The concatenated string, or NULL on failure.
  */
