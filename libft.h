@@ -6,7 +6,7 @@
 /*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:23:38 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/04/22 19:12:00 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/04/22 20:09:25 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,12 @@
 #  define BUFFER_SIZE 10
 # endif
 
-typedef enum e_vtype
-{
-	V_STR,
-	V_INT,
-	V_NODE,
-}	t_vtype;
-
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 int					ft_isprint(int c);
 int					ft_isdigit(int c);
 int					ft_isascii(int c);
@@ -103,7 +97,6 @@ void				ft_close_fd(int *fd);
 size_t				ft_size_vetor(char **vetor);
 
 /*get_next_line*/
-
 char				*ft_gnl(int fd);
 
 #endif
