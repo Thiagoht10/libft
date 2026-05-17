@@ -6,12 +6,13 @@
 /*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 16:34:02 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/05/17 17:32:25 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/05/17 18:55:51 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #define POPEN_INTERNAL_BUILD
 #include "popen_internal.h"
+#include "libft.h"
 
 /**
  * Closes valid pipe file descriptors.
@@ -43,7 +44,7 @@ static void	child_popen(const char *command, const char type, int fd[2])
 {
 	if (type == 'r')
 	{
-		if (dup2(fd[1], STDOUT_FILENO) == -1)
+		if (ft_dup2(fd[1], STDOUT_FILENO) == -1)
 		{
 			cleanup(fd);
 			exit(EXIT_FAILURE);
@@ -51,13 +52,12 @@ static void	child_popen(const char *command, const char type, int fd[2])
 	}
 	else if (type == 'w')
 	{
-		if (dup2(fd[0], STDIN_FILENO) == -1)
+		if (ft_dup2(fd[0], STDIN_FILENO) == -1)
 		{
 			cleanup(fd);
 			exit(EXIT_FAILURE);
 		}
 	}
-	cleanup(fd);
 	execl("/bin/sh", "sh", "-c", command, (char *) NULL);
 	if (type == 'w')
 		close(STDIN_FILENO);

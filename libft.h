@@ -6,7 +6,7 @@
 /*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:23:38 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/05/17 16:52:09 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/05/17 18:54:15 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,7 @@ size_t				ft_size_vetor(char **vetor);
 char				*ft_gnl(int fd);
 int					ft_popen(const char *command, const char type);
 int					ft_pclose(int fd);
+char				**ft_get_env(void);
+int					ft_dup2(int oldfd, int newfd);
 
 #endif
