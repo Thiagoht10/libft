@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thiago <thiago@student.42.fr>              +#+  +:+       +#+         #
+#    By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/15 18:08:12 by thde-sou          #+#    #+#              #
-#    Updated: 2026/03/26 20:52:02 by thiago           ###   ########.fr        #
+#    Updated: 2026/05/17 16:48:06 by thde-sou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ ft_isspace.c ft_free_vector.c  ft_free_failed_vector.c ft_vetor_dup.c \
 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_gnl.c \
-ft_memdel.c ft_clean_4.c ft_clean_2.c ft_close_fd.c
+ft_memdel.c ft_clean_4.c ft_clean_2.c ft_close_fd.c \
+ft_pclose.c ft_popen.c ft_popen_internal.c
 
 OBJ = $(SRC:.c=.o)
 

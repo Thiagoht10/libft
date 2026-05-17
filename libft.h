@@ -6,7 +6,7 @@
 /*   By: thde-sou <thde-sou@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 18:23:38 by thde-sou          #+#    #+#             */
-/*   Updated: 2026/04/22 20:09:25 by thde-sou         ###   ########.fr       */
+/*   Updated: 2026/05/17 16:52:09 by thde-sou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,8 @@ void				ft_clean_4(void **prt1, void **prt2, void **prt3,
 						void **prt4);
 void				ft_close_fd(int *fd);
 size_t				ft_size_vetor(char **vetor);
-
-/*get_next_line*/
 char				*ft_gnl(int fd);
+int					ft_popen(const char *command, const char type);
+int					ft_pclose(int fd);
 
 #endif
